@@ -4,7 +4,7 @@ SITE_ID = 1
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': '/tmp/django-contacts-devel.db'
+		'NAME': ':memory:'  # '/tmp/django-contacts-devel.db'
 	}
 }
 INSTALLED_APPS = [
@@ -14,7 +14,6 @@ INSTALLED_APPS = [
 	'django.contrib.sites',
 	'django.contrib.admin',
 	'django.contrib.admindocs',
-	'django.contrib.comments',
 	'django.contrib.staticfiles',
 	'south',
 	'contacts',

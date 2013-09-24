@@ -2,7 +2,6 @@ from django.db import models
 from django.db.models import permalink
 from django.contrib.contenttypes import generic
 from django.utils.translation import ugettext as _
-from django.contrib.comments.models import Comment
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.generic import GenericRelation
 
@@ -28,7 +27,6 @@ class Company(models.Model):
     web_site = GenericRelation('WebSite')
     street_address = GenericRelation('StreetAddress')
     special_date = GenericRelation('SpecialDate')
-    note = GenericRelation(Comment, object_id_field='object_pk')
 
     date_added = models.DateTimeField(_('date added'), auto_now_add=True)
     date_modified = models.DateTimeField(_('date modified'), auto_now=True)
@@ -85,7 +83,6 @@ class Person(models.Model):
     web_site = GenericRelation('WebSite')
     street_address = GenericRelation('StreetAddress')
     special_date = GenericRelation('SpecialDate')
-    note = GenericRelation(Comment, object_id_field='object_pk')
     
     date_added = models.DateTimeField(_('date added'), auto_now_add=True)
     date_modified = models.DateTimeField(_('date modified'), auto_now=True)
