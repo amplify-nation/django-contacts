@@ -10,10 +10,7 @@ from contacts.managers import SpecialDateManager
 
 from django.contrib.auth import get_user_model
 
-try:
-    from django.contrib.auth.models import User
-except:
-    User = get_user_model()
+User = get_user_model()
 
 
 class Company(models.Model):
