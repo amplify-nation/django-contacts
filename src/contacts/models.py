@@ -92,23 +92,26 @@ class Person(models.Model):
         abstract = True
         #db_table = 'contacts_people'
         ordering = ('last_name', 'first_name')
-        verbose_name = _('person')
-        verbose_name_plural = _('people')
-    
+        # verbose_name = _('person')
+        # verbose_name_plural = _('people')
+
     def __unicode__(self):
         return self.fullname
-    
+
+    def __str__(self):
+        return self.fullname
+
     @property
     def fullname(self):
         return u"%s %s" % (self.first_name, self.last_name)
-    
+
     @permalink
     def get_absolute_url(self):
         return ('contacts_person_detail', None, {
             'pk': self.pk,
             'slug': self.slug,
         })
-    
+
     @permalink
     def get_update_url(self):
         return ('contacts_person_update', None, {

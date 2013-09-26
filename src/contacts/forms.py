@@ -2,7 +2,7 @@ from django import forms
 from django.forms import ModelForm, Form
 from django.contrib.contenttypes.generic import generic_inlineformset_factory as inlineformset_factory
 
-from contacts.models import Company, Person, Group, PhoneNumber, EmailAddress, InstantMessenger, WebSite, StreetAddress, SpecialDate
+from contacts.models import Company, Person, PhoneNumber, EmailAddress, StreetAddress, SpecialDate
 
 class CompanyCreateForm(ModelForm):
 	class Meta:
