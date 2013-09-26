@@ -16,26 +16,26 @@ class CompanyUpdateForm(ModelForm):
 class PersonCreateForm(ModelForm):
 	class Meta:
 		model = Person
-		fields = ('first_name', 'last_name', 'title', 'company', 'about')
+		fields = ('first_name', 'last_name', 'title', 'about')
 
 class PersonUpdateForm(ModelForm):
 	class Meta:
 		model = Person
-		fields = ('first_name', 'last_name', 'title', 'company')
+		fields = ('first_name', 'last_name', 'title')
 
-class GroupCreateForm(ModelForm):
-	class Meta:
-		model = Group
-		fields = ('name', 'about')
-
-class GroupUpdateForm(ModelForm):
-	class Meta:
-		model = Group
-		exclude = ('slug',)
+# class GroupCreateForm(ModelForm):
+# 	class Meta:
+# 		model = Group
+# 		fields = ('name', 'about')
+# 
+# class GroupUpdateForm(ModelForm):
+# 	class Meta:
+# 		model = Group
+# 		exclude = ('slug',)
 
 PhoneNumberFormSet = inlineformset_factory(PhoneNumber, extra=1)
 EmailAddressFormSet = inlineformset_factory(EmailAddress, extra=1)
-InstantMessengerFormSet = inlineformset_factory(InstantMessenger, extra=1)
-WebSiteFormSet = inlineformset_factory(WebSite, extra=1)
+#InstantMessengerFormSet = inlineformset_factory(InstantMessenger, extra=1)
+#WebSiteFormSet = inlineformset_factory(WebSite, extra=1)
 StreetAddressFormSet = inlineformset_factory(StreetAddress, extra=1)
 SpecialDateFormSet = inlineformset_factory(SpecialDate, extra=1)

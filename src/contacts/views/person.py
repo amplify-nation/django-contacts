@@ -6,7 +6,9 @@ from django.template import RequestContext
 from django.template.defaultfilters import slugify
 
 from contacts.models import Person
-from contacts.forms import PersonCreateForm, PersonUpdateForm, PhoneNumberFormSet, EmailAddressFormSet, InstantMessengerFormSet, WebSiteFormSet, StreetAddressFormSet, SpecialDateFormSet
+from contacts.forms import PersonCreateForm, PersonUpdateForm, PhoneNumberFormSet, EmailAddressFormSet,  StreetAddressFormSet, SpecialDateFormSet
+#  InstantMessengerFormSet,
+#  WebSiteFormSet,
 
 
 def list(request, page=1, template='contacts/person/list.html'):
