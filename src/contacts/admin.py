@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.contrib.contenttypes import generic
 
-from contacts.models import Company, PhoneNumber, EmailAddress, WebSite, StreetAddress, SpecialDate, Location
+from contacts.models import PhoneNumber, EmailAddress, WebSite, StreetAddress, SpecialDate, Location
+# Company
+
 
 class EmailAddressInline(generic.GenericTabularInline):
     model = EmailAddress

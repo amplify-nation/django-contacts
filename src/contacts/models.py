@@ -23,7 +23,7 @@ class Company(models.Model):
 
     phone_number = GenericRelation('PhoneNumber')
     email_address = GenericRelation('EmailAddress')
-    instant_messenger = GenericRelation('InstantMessenger')
+    #instant_messenger = GenericRelation('InstantMessenger')
     web_site = GenericRelation('WebSite')
     street_address = GenericRelation('StreetAddress')
     special_date = GenericRelation('SpecialDate')
@@ -80,7 +80,7 @@ class Person(models.Model):
 
     phone_number = GenericRelation('PhoneNumber')
     email_address = GenericRelation('EmailAddress')
-    instant_messenger = GenericRelation('InstantMessenger')
+    #instant_messenger = GenericRelation('InstantMessenger')
     web_site = GenericRelation('WebSite')
     street_address = GenericRelation('StreetAddress')
     special_date = GenericRelation('SpecialDate')
