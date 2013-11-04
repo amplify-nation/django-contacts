@@ -64,7 +64,7 @@ class Company(models.Model):
 
 class Person(models.Model):
     """Person model."""
-    first_name = models.CharField(_('first name'), max_length=100)
+    first_name = models.CharField(_('first name'), max_length=100, blank=True)
     last_name = models.CharField(_('last name'), max_length=200)
     middle_name = models.CharField(_('middle name'), max_length=200, blank=True, null=True)
     suffix = models.CharField(_('suffix'), max_length=50, blank=True, null=True)
